@@ -1,10 +1,9 @@
 # Retos en ANSI C — Sistemas Operativos
 
-Pequeño set de 5 ejercicios en C para practicar conceptos de SO. Compilas con `make`, ejecutas `./retoN`, limpias con `make clean`. Rápido y sin drama.
+Pequeño set de 5 ejercicios en C para practicar conceptos de SO. Compilas con `make`, ejecutas `./retoN`, limpias con `make clean`.
 
 ---
 
-## 🧩 Ejercicios
 
 | # | Fuente         | Ejecutable |
 | - | -------------- | ---------- |
@@ -16,7 +15,7 @@ Pequeño set de 5 ejercicios en C para practicar conceptos de SO. Compilas con `
 
 ---
 
-## ✅ Requisitos
+## Requisitos
 
 * `gcc`
 * `make`
@@ -24,7 +23,7 @@ Pequeño set de 5 ejercicios en C para practicar conceptos de SO. Compilas con `
 
 ---
 
-## ⚙️ Compilación
+##  Compilación
 
 ```bash
 # Compilar todo
@@ -36,7 +35,7 @@ make reto3
 
 ---
 
-## 🚀 Ejecución
+## Ejecución
 
 ```bash
 ./reto1
@@ -48,7 +47,7 @@ make reto3
 
 ---
 
-## 🧽 Limpieza
+##  Limpieza
 
 ```bash
 make clean
@@ -56,7 +55,7 @@ make clean
 
 ---
 
-## 📁 Estructura sugerida
+## Estructura 
 
 ```
 .
@@ -71,26 +70,10 @@ make clean
 
 ---
 
-## 🛠️ Objetivos de `make` (referencia)
+##  Objetivos de `make` 
 
 ```Makefile
 # make        -> compila todos los retos
 # make retoN  -> compila solo el N
 # make clean  -> elimina binarios
 ```
-
----
-
-## 🧪 Tip rápido de prueba
-
-```bash
-# Ver salida y código de retorno
-./reto1 ; echo "exit:$?"
-```
-
----
-
-## 📎 Notas
-
-* Flags y dependencias se controlan en el `Makefile`.
-* Si falla la compilación, verifica que `gcc` y `make` estén en PATH.
