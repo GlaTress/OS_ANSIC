@@ -1,0 +1,36 @@
++--------------------------------------------------------------+
+|                                                              |
+|           Apuntador                                          |
+| +-----------------------------+                              |
+| |un apuntador es una reserva  | -> Si se reserva memoria     |
+| |de memoria del tipo.         |    se debe liberar.          |
+| +-----------------------------+                              |
+|                                                              |
+|..............................................................|
+|                                                              |
+| +-----------------------------+                              |
+| |Bloques basicos de Programa  | -> Entidad viva de un        |
+| |se convierten en un proceso  |    programa.                 |
+| +-----------------------------+    Proceso : Programa en     |
+|               |                    (Activa)  ejecucion.      |
+|              \|/                   Programa: Bloques basicos |
+|               °                    (Pasiva)  de programación.|
+|      Los procesos tienen ID                                  |
+|                                                              |
+|  Proceso: New --> Ready  -->  Running --> Terminated         |
+|                     |           -.-                          |
+|                     |            |                           |
+|                     +---Waiting--+                           |
+|                                                              |
+|  Planificador de procesos: determina como viven las entidades|
+|  |                         Arbitro que controla los procesos.|
+|  |                                                           |
+|  +---> Tiempo de respuesta minimo para usuario               |
+|  |                                                           |
+|  +---> Utilizacion de CPU al 100%                            |
+|  |                                                           |
+|  +---> Cada proceso debe tener una parte justa de CPU        |
+|                                                              |
+|  Bloque de control de proceso : Ruta de proceso              |
+|                                                              |
++--------------------------------------------------------------+
