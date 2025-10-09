@@ -95,7 +95,7 @@ int main() {
 
         printf("\tPADRE: Envio mensaje al hijo.\n");
 
-        /* ---- Cierre del extremo de escritura: notifica fin de datos al lector ---- */
+        /* ---- Cierre del extremo de escritura ---- */
         close(pipefd[1]);
     }
 
@@ -104,3 +104,4 @@ int main() {
 
     return 0;
 }
+
