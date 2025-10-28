@@ -73,6 +73,6 @@ Este proyecto contiene varios laboratorios desarrollados en C para la asignatura
 
 Para compilar todos los laboratorios, simplemente ejecuta:
 
-```bash
+```
 make
 
