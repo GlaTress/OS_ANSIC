@@ -136,17 +136,6 @@ gcc -fopenmp lab05.c -o lab05 -lm
 
 ./lab05 4 30000
 
-**Salida esperada:**
-
-Configuración:
-  Hilos del sistema  : 8
-  Hilos solicitados  : 4
-  Iteraciones (N)    : 30000
-
-Resultado final:
-  Valor de la sumatoria = 22.448109
-  Tiempo total de ejecución = 0.532145 segundos
-
 ---
 
 ## Compilación con Makefile
