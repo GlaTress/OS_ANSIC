@@ -17,15 +17,6 @@ Cada laboratorio está escrito en lenguaje C y debe compilarse con la opción `-
 - Compilador GCC instalado (versión 9 o superior).  
 - Librería matemática (`-lm`) disponible en el entorno.
 
-## Estructura de archivos
-
-├── lab01.c   → Región paralela básica (Hello World)
-├── lab02.c   → Control de número de hilos desde CLI
-├── lab03.c   → Variables privadas y compartidas
-├── lab04.c   → Múltiples variables privadas
-├── lab05.c   → Sumatoria paralela con reducción y medición de tiempo
-└── Makefile  → Automatiza la compilación de todos los laboratorios
-
 ## Laboratorios
 
 ### Lab01 – Introducción a OpenMP
