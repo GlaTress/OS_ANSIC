@@ -38,9 +38,6 @@
 /*             en OpenMP mediante un argumento de entrada.                                                  */
 /*                                                                                                          */
 /*  Parámetros: argc / argv : recibe el número de hilos a ejecutar (numHilos).                              */
-/*                                                                                                          */
-/*  Retorno:   0 si finaliza correctamente.                                                                 */
-/*                                                                                                          */
 /************************************************************************************************************/
 int main (int argc, char *argv[]) {
 
