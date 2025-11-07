@@ -34,8 +34,6 @@
 /*  Propósito: Ejecutar un ejemplo introductorio a OpenMP, mostrando el uso de regiones paralelas           */
 /*             y la obtención del número de hilos activos e identificadores de cada uno.                    */
 /*                                                                                                          */
-/*  Retorno:   0 si finaliza correctamente.                                                                 */
-/*                                                                                                          */
 /************************************************************************************************************/
 int main(int argc, char *argv[]) {
 
