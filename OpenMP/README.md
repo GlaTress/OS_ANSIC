@@ -159,13 +159,6 @@ make          # Compila todos los laboratorios
 make lab03    # Compila un laboratorio específico
 make clean    # Elimina ejecutables generados
 
-## Conclusión general
-
-Estos cinco laboratorios constituyen la base práctica del uso de OpenMP.
-Permiten comprender el modelo de paralelismo de memoria compartida, la independencia de variables por hilo, la sincronización de operaciones y la medición del rendimiento.
-Cada paso amplía progresivamente la capacidad de controlar y optimizar la ejecución concurrente en C.
-
-
 Pontificia Universidad Javeriana — Departamento de Ingeniería de Sistemas
 Curso: Sistemas Operativos
 Profesor: PhD. John Jairo Corredor
