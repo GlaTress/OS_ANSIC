@@ -54,10 +54,10 @@ int main(){
         struct dirent *direc;
 
         /* --- Solicitud de ruta al usuario ---*/
-        printf (Introduzca el Nombre de un Directorio: );
+        printf ("Introduzca el Nombre de un Directorio: ");
 
         /* --- Leer el nombre del directorio desde stdin (incluye salto de línea) ---*/
-        fgets (nomdir,sizeof(nomdir),stdin); //Guarda el nombre y el tamaño del directorio
+        fgets (nomdir, sizeof(nomdir),stdin); //Guarda el nombre y el tamaño del directorio
 
         /* --- Eliminar el salto de línea final en el buffer leído ---*/
         nomdir[strlen(nomdir)-1]='\0'; //Eliminamos el \n del Nombre del Fichero
@@ -90,7 +90,7 @@ int main(){
         if (S_ISREG(datos.st_mode)) //Comprueba que el archivo sea un archivo regular
 
                 /* --- Imprimir nombre del archivo y tamaño en bytes ---*/
-                printf (Nombre: %s\t| Tamaño: %lld\n,direc->d_name,datos.st_size); //Imprime el nombre y el tamaño
+                printf ("Nombre: %s\t| Tamaño: %lld\n", direc->d_name,datos.st_size); //Imprime el nombre y el tamaño
 
         }/* --- Fin del bucle de lectura de entradas ---*/
 
