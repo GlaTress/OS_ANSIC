@@ -65,7 +65,7 @@ int main(){
         /* --- Intentar abrir el directorio; validar existencia/permisos ---*/
         if ((d=opendir(nomdir))==NULL){
                 /* --- Informar que el directorio no existe o no se pudo abrir ---*/
-                printf (El directorio no existe\n);
+                printf ("El directorio no existe\n");
                 /* --- Finalizar con código de error ---*/
                 return -1;
         }
@@ -90,7 +90,7 @@ int main(){
         if (S_ISREG(datos.st_mode)) //Comprueba que el archivo sea un archivo regular
 
                 /* --- Imprimir nombre del archivo y tamaño en bytes ---*/
-                printf ("Nombre: %s\t| Tamaño: %lld\n", direc->d_name,datos.st_size); //Imprime el nombre y el tamaño
+                printf ("Nombre: %s\t| Tamaño: %ld\n", direc->d_name,datos.st_size); //Imprime el nombre y el tamaño
 
         }/* --- Fin del bucle de lectura de entradas ---*/
 
