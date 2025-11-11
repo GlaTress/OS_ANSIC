@@ -1,0 +1,101 @@
+/*************************************************************************************************************
+*  Programa:     Directorios y ficheros                                                                      *
+*  autor:        Thomas Leal Puerta                                                                          *
+*  Fecha:        11 de noviembre de 2025                                                                     *
+*                                                                                                            *
+*  Tema: Sistema de Ficheros                                                                                 *
+* Descripcion: Programa en C que lea del teclado el nomnre de un directorio y uestre en ptntalla el nombre   *
+*              y el tamaño de los ficheros que contiene                                                      *
+*************************************************************************************************************/
+
+/************************************************* Headers **************************************************/
+#include <sys/types.h>   /* Tipos basicos del sistema */
+#include <sys/stat.h>    /* struct stat y macros S_IS */
+#include <sys/mman.h>    /* Mapeo de memoria */
+#include <dirent.h>      /* DIR, opendir, readdir, closedir */
+#include <fcntl.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+
+/************************************************************************************************************/
+/*                                                                                                          *
+/*  int main();                                                                                             *
+/*                                                                                                          *
+/*  Proposito:                                                                                              *
+/*      Solicitar al usuario un directorio y listar, para cada archivo,                                     *
+/*      su nombre y tamaño en bytes.                                                                        *
+/*                                                                                                          *
+/*  Partes del método:                                                                                      *
+/*      Parte 1: Declaraciones y lectura del nombre del directorio.                                         *
+/*      Parte 2: Recorrido del directorio, construcción de la ruta y consulta con stat.                     *
+/*      Parte 3: Cierre del recurso y terminación.                                                          *
+/*                                                                                                          *
+/*  Retorno:                                                                                                *
+/*      -  0  si finaliza correctamente.                                                                    *
+/*      - -1  si el directorio no existe o no puede abrirse.                                                *
+/*                                                                                                          *
+/************************************************************************************************************/
+int main(){
+        /* --- Parte 1 ---*/
+
+        /* --- Puntero al directorio ---*/
+        DIR *d;
+
+        /* --- Variables que guardan el nombre de directorio y del fichero ---*/
+        char nomdir[90], nomfich[90]; //Variables que guardan el nombre de directorio y del  fichero
+
+        /* --- Estructura para datos del archivo ---*/
+        struct stat datos;
+
+        /* --- Entrada de directorio leída con readdir ---*/
+        struct dirent *direc;
+
+        /* --- Solicitud de ruta al usuario ---*/
+        printf (Introduzca el Nombre de un Directorio: );
+
+        /* --- Leer el nombre del directorio desde stdin (incluye salto de línea) ---*/
+        fgets (nomdir,sizeof(nomdir),stdin); //Guarda el nombre y el tamaño del directorio
+
+        /* --- Eliminar el salto de línea final en el buffer leído ---*/
+        nomdir[strlen(nomdir)-1]='\0'; //Eliminamos el \n del Nombre del Fichero
+
+        /* --- Intentar abrir el directorio; validar existencia/permisos ---*/
+        if ((d=opendir(nomdir))==NULL){
+                /* --- Informar que el directorio no existe o no se pudo abrir ---*/
+                printf (El directorio no existe\n);
+                /* --- Finalizar con código de error ---*/
+                return -1;
+        }
+
+        /* --- Parte 2 ---*/
+
+        /* --- Iterar cada entrada del directorio hasta NULL ---*/
+        while ((direc=readdir(d)) !=NULL) { 
+
+                /* --- Copiar la ruta base del directorio en el buffer de archivo ---*/
+                strcpy(nomfich, nomdir); //Copia en nomfich el nomdir
+
+                /* --- Añadir separador de directorio ---*/
+                strcat(nomfich, /); //Concatena el nombre del fichero con /
+
+                /* --- Concatenar el nombre de la entrada para formar la ruta completa ---*/
+                strcat(nomfich, direc->d_name ); //Reconstruye las rutas de los archivos
+
+                /* --- Obtener metadatos del path construido mediante stat ---*/
+                stat (nomfich, &datos); //Obtiene los datos del archivo
+
+        if (S_ISREG(datos.st_mode)) //Comprueba que el archivo sea un archivo regular
+
+                /* --- Imprimir nombre del archivo y tamaño en bytes ---*/
+                printf (Nombre: %s\t| Tamaño: %lld\n,direc->d_name,datos.st_size); //Imprime el nombre y el tamaño
+
+        }/* --- Fin del bucle de lectura de entradas ---*/
+
+        /* --- Parte 3 ---*/
+
+        /* --- Cerrar el directorio y liberar el descriptor ---*/
+        closedir(d);
+}
