@@ -1,11 +1,11 @@
-/*************************************************************************************************************
-*  Programa:     Directorios y ficheros                                                                      *
-*  autor:        Thomas Leal Puerta                                                                          *
-*  Fecha:        11 de noviembre de 2025                                                                     *
-*                                                                                                            *
-*  Tema: Sistema de Ficheros                                                                                 *
-* Descripcion: Programa en C que lea del teclado el nomnre de un directorio y uestre en ptntalla el nombre   *
-*              y el tamaño de los ficheros que contiene                                                      *
+/************************************************************************************************************
+*  Programa:     Directorios y ficheros                                                                     *
+*  autor:        Thomas Leal Puerta                                                                         *
+*  Fecha:        11 de noviembre de 2025                                                                    *
+*                                                                                                           *
+*  Tema: Sistema de Ficheros                                                                                *
+* Descripcion: Programa en C que lea del teclado el nombre de un directorio y muestre en pantalla el nombre *
+*              y el tamaño de los ficheros que contiene                                                     *
 *************************************************************************************************************/
 
 /************************************************* Headers **************************************************/
