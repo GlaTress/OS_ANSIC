@@ -79,7 +79,7 @@ int main(){
                 strcpy(nomfich, nomdir); //Copia en nomfich el nomdir
 
                 /* --- Añadir separador de directorio ---*/
-                strcat(nomfich, /); //Concatena el nombre del fichero con /
+                strcat(nomfich, "/"); //Concatena el nombre del fichero con /
 
                 /* --- Concatenar el nombre de la entrada para formar la ruta completa ---*/
                 strcat(nomfich, direc->d_name ); //Reconstruye las rutas de los archivos
