@@ -33,8 +33,8 @@ Solicitar un directorio al usuario y **listar cada archivo regular** con su **no
 **Compilación y ejecución:**
 make lab01
 ./lab01
-# luego escriba la ruta, por ejemplo:
-# /home/usuario/documentos
+luego escriba la ruta, por ejemplo:
+Directorio
 
 ### Lab02 – Listado de archivos tamaños y tiempo
 
@@ -49,5 +49,5 @@ Solicitar un directorio al usuario y **listar cada archivo regular** con su **no
 **Compilación y ejecución:**
 make lab02
 ./lab02
-# luego escriba la ruta, por ejemplo:
-# /home/usuario/documentos
+luego escriba la ruta, por ejemplo:
+Directorio
