@@ -1,4 +1,4 @@
-# Laboratorios OpenMP — Sistemas Operativos  
+# Laboratorios Ficheros — Sistemas Operativos  
 Pontificia Universidad Javeriana  
 Profesor: John Jairo Corredor, PhD  
 Autor: Thomas Leal Puerta  
