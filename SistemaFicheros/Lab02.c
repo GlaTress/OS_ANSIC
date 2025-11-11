@@ -1,11 +1,11 @@
 /*************************************************************************************************************
-*  Programa:     Directorios y ficheros                                                                      *
-*  autor:        Thomas Leal Puerta                                                                          *
-*  Fecha:        11 de noviembre de 2025                                                                     *
-*                                                                                                            *
-*  Tema: Sistema de Ficheros                                                                                 *
-* Descripcion: Programa en C que lea del teclado el nombre de un directorio y muestre en pantalla el nombre  *
-*              fecha, permisos y el tamaño de los ficheros que contiene                                      *
+*  Programa:     Directorios y ficheros                                                                     *
+*  autor:        Thomas Leal Puerta                                                                         *
+*  Fecha:        11 de noviembre de 2025                                                                    *
+*                                                                                                           *
+*  Tema: Sistema de Ficheros                                                                                *
+* Descripcion: Programa en C que lea del teclado el nombre de un directorio y muestre en pantalla el nombre *
+*              fecha, permisos y el tamaño de los ficheros que contiene                                     *
 *************************************************************************************************************/
 
 /************************************************* Headers **************************************************/
@@ -23,12 +23,12 @@
 /*  int main();                                                                                             *
 /*                                                                                                          *
 /*  Proposito:                                                                                              *
-/*      Solicitar el nombre de un directorio, listar sus entradas y mostrar atributos con stat:           *
+/*      Solicitar el nombre de un directorio, listar sus entradas y mostrar atributos con stat:             *
 /*      modo, permisos basicos y filtrado de ficheros modificados en los ultimos 10 dias.                   *
 /*                                                                                                          *
 /*  Partes del metodo:                                                                                      *
 /*      Parte 1: Declaraciones, lectura del nombre del directorio y apertura.                               *
-/*      Parte 2: Recorrido de entradas, construccion de ruta, stat y reporte de atributos.               *
+/*      Parte 2: Recorrido de entradas, construccion de ruta, stat y reporte de atributos.                  *
 /*      Parte 3: Cierre del directorio y terminacion del programa.                                          *
 /*                                                                                                          *
 /*  Retorno:                                                                                                *
