@@ -31,13 +31,12 @@ Solicitar un directorio al usuario y **listar cada archivo regular** con su **no
 - `stat` y macro `S_ISREG` para filtrar solo archivos regulares  
 
 **Compilación y ejecución:**
-```bash
 make lab01
 ./lab01
 # luego escriba la ruta, por ejemplo:
 # /home/usuario/documentos
 
-### Lab01 – Listado de archivos tamaños y tiempo
+### Lab02 – Listado de archivos tamaños y tiempo
 
 **Objetivo:**  
 Solicitar un directorio al usuario y **listar cada archivo regular** con su **nombre, tamaño (bytes), permisos y tiempo de creacion**.
@@ -48,7 +47,6 @@ Solicitar un directorio al usuario y **listar cada archivo regular** con su **no
 - `stat` y macro `S_ISREG` para filtrar solo archivos regulares  
 
 **Compilación y ejecución:**
-```bash
 make lab02
 ./lab02
 # luego escriba la ruta, por ejemplo:
