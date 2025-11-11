@@ -41,9 +41,10 @@ luego escriba la ruta
 Solicitar un directorio al usuario y **listar cada archivo regular** con su **nombre, tamaño (bytes), permisos y tiempo de creacion**.
 
 **Conceptos aplicados:**  
-- `opendir`, `readdir`, `closedir`  
-- Construcción de rutas con concatenación segura  
-- `stat` y macro `S_ISREG` para filtrar solo archivos regulares  
+- stat y lectura del campo st_mode
+- Impresión del modo en octal (%#o) y verificación de permisos (p. ej., 0400 lectura propietario)
+- Macros S_ISDIR, S_ISREG para distinguir tipo de entrada
+- Comparación temporal (time, st_mtime, ctime) para filtrar por ventana móvil de 10 días
 
 **Compilación y ejecución:**
 make lab02
