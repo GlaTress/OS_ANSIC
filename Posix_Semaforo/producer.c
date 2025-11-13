@@ -20,14 +20,7 @@
 
 /* ============================================== Headers ========================================== */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/mman.h>
-#include <semaphore.h>
-#include "compartir.h"
+#include "semaforo.h"
 
 /****************************************************************************************************
 *  Funcion:      int main()                                                                         *
@@ -35,7 +28,7 @@
 *                en el bufer circular, sincronizando con semaforos vacio (espacios libres) y        *
 *                lleno (espacios ocupados).                                                         *
 *  Parametros:   (ninguno)                                                                          *
-*  Retorno:      EXIT_SUCCESS (0) si no hay errores; EXIT_FAILURE en caso de fallo.                 *
+*  Retorno:      1 si no hay errores; EXIT_FAILURE en caso de fallo.                 *
 *****************************************************************************************************/
 int main() {
     /* ---- Abrir/crear semaforos con nombre: vacio y lleno ---- */
@@ -101,5 +94,5 @@ int main() {
     sem_unlink("/lleno");
     shm_unlink("/memoria_compartida");
 
-    return EXIT_SUCCESS;
+    return 0;
 }
