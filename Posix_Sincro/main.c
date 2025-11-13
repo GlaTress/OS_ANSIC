@@ -21,22 +21,6 @@
 
 #include "sincro.h"
 
-/* ---- Buffer circular de impresion: MAX_BUFFERS entradas de 100 chars ---- */
-char buf [MAX_BUFFERS] [100];
-
-/* ---- indice de escritura y de lectura (spooler) sobre el buffer circular ---- */
-int buffer_index;
-int buffer_print_index;
-
-/* ---- Sincronizacion: mutex y condiciones para productores/spooler ---- */
-pthread_mutex_t buf_mutex = PTHREAD_MUTEX_INITIALIZER;
-pthread_cond_t buf_cond = PTHREAD_COND_INITIALIZER;
-pthread_cond_t spool_cond = PTHREAD_COND_INITIALIZER;
-
-/* ---- Contabilidad: buffers libres y lineas pendientes por imprimir ---- */
-int buffers_available = MAX_BUFFERS;
-int lines_to_print = 0;
-
 /* **********************************************************************************************
  * Firma:     int main (int argc, char **argv)                                                  *
  * Proposito: Punto de entrada del programa. Inicializa los indices, crea los hilos productores *
