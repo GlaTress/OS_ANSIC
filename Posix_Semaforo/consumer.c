@@ -49,9 +49,7 @@ int main(void) {
     }
 
     /* ---- Mapear el segmento para acceder al bufer compartido ---- */
-    compartir_datos *compartir = mmap(NULL, sizeof(compartir_datos),
-                                      PROT_READ | PROT_WRITE, MAP_SHARED,
-                                      fd_compartido, 0);
+    compartir_datos *compartir = mmap(NULL, sizeof(compartir_datos), PROT_READ | PROT_WRITE, MAP_SHARED, fd_compartido, 0);
     if (compartir == MAP_FAILED) {
         perror("mmap");
         close(fd_compartido);
