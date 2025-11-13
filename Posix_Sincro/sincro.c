@@ -47,8 +47,6 @@ int lines_to_print = 0;
  * Proposito: Hilo productor. Escribe mensajes en los buferes cuando haya espacio disponible.    *
  * Parametros:                                                                                   *
  *   - arg: puntero a entero que indica el identificador logico del hilo productor.              *
- * Retorno:                                                                                      *
- *   - void *: no se utiliza; el hilo termina cuando completa sus iteraciones.                   *
  *************************************************************************************************/
 void *producer (void *arg){
     int i, r;
@@ -89,14 +87,12 @@ void *producer (void *arg){
     }
 }
 
-/* **********************************************************************************************
- * Firma:     void *spooler (void *arg)
- * Proposito: Hilo spooler (consumidor). Toma lineas del bufer y las imprime en stdout.
- * Parametros:
- *   - arg: no se usa (puede ser NULL).
- * Retorno:
- *   - void *: no retorna, corre en lazo infinito hasta ser cancelado.
- ********************************************************************************************** */
+/************************************************************************************************
+ * Firma:     void *spooler (void *arg)                                                         *
+ * Proposito: Hilo spooler (consumidor). Toma lineas del bufer y las imprime en stdout.         *
+ * Parametros:                                                                                  *
+ *   - arg: no se usa (puede ser NULL).                                                         *
+ ************************************************************************************************/
 void *spooler (void *arg){
     int r;
 
