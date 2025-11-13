@@ -10,32 +10,27 @@
 *  Objetivo:     Implementar el proceso CONSUMIDOR del problema Productor–Consumidor, utilizando    *
 *                semaforos POSIX con nombre para sincronizar y memoria compartida para intercambiar *
 *                datos con el productor.                                                            *
-*****************************************************************************************************/
-
-/****************************************************************************************************
+*                                                                                                   *
+*****************************************************************************************************
+*                                                                                                   *
 *                                   HOW TO USE / COMPILE / RUN                                      *
 *  COMPILAR:   gcc -o consumer consumer.c -lrt -pthread                                             *
 *  EJECUTAR:   ./consumer                                                                           *
 *  NOTAS:      - Espera a que el productor cree los semaforos y la memoria compartida.              *
 *              - Consume 10 elementos del bufer circular compartido.                                *
+*                                                                                                   *
 *****************************************************************************************************/
 
 /* ============================================== Headers ========================================== */
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <fcntl.h>
-#include <sys/stat.h>
-#include <sys/mman.h>
-#include <semaphore.h>
-#include "compartir.h"
+#include "semaforo.h"
 
 /****************************************************************************************************
+*                                                                                                   *
 *  Funcion:      int main(void)                                                                     *
 *  Proposito:    Abrir los semaforos y el segmento de memoria compartida creados por el productor,  *
 *                y consumir 10 elementos del bufer circular respetando la sincronizacion.           *
-*  Parametros:   (ninguno)                                                                          *
-*  Retorno:      EXIT_SUCCESS (0) si no hay errores; EXIT_FAILURE en caso de fallo.                 *
+*  Retorno:       0 si no hay errores; EXIT_FAILURE en caso de fallo.                               *
+*                                                                                                   *
 *****************************************************************************************************/
 int main(void) {
     /* ---- Abrir semaforos con nombre (deben existir) ---- */
@@ -76,7 +71,7 @@ int main(void) {
         printf("Consumidor: Consume %d\n", item);
         compartir->salida = (compartir->salida + 1) % BUFFER;
 
-        /* ---- Señalar que quedo un espacio libre (V en vacio) ---- */
+        /* ---- Sennalar que quedo un espacio libre (V en vacio) ---- */
         sem_post(vacio);
 
         /* ---- Ritmo de consumo (simulacion) ---- */
