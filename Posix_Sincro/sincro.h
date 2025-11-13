@@ -16,8 +16,8 @@
 *        gcc -pthread main.c sincro.c -o sincro                                                 *
 *************************************************************************************************/
 
-#ifndef PRODUCER_SPOOLER_H
-#define PRODUCER_SPOOLER_H
+#ifndef __SINCRO_H__
+#define __SINCRO_H__
 
 /**************************************** Headers **********************************************/
 #include <pthread.h>
@@ -48,4 +48,4 @@ void *producer (void *arg);
  ************************************************************************************************/
 void *spooler (void *arg);
 
-#endif /* PRODUCER_SPOOLER_H */
+#endif /* __SINCRO_H__ */
