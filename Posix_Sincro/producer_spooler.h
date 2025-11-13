@@ -21,15 +21,16 @@
 
 /**************************************** Headers **********************************************/
 #include <pthread.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <string.h>
 
 /* -------------------------------------------------------------------------------------------- */
 /* Constantes                                                                                   */
 /* -------------------------------------------------------------------------------------------- */
 
-/* ---- Número máximo de búferes disponibles ---- */
-#ifndef MAX_BUFFERS
 #define MAX_BUFFERS 10   /* Puede ajustarse si el código original define otro valor */
-#endif
 
 /* -------------------------------------------------------------------------------------------- */
 /* Prototipos de funciones                                                                      */
