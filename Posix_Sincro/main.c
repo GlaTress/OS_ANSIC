@@ -11,10 +11,9 @@
 * HOW TO USE                                                                                    *
 * --------------------------------------------------------------------------------------------- *
 * 1. Compilar el proyecto:                                                                      *
-*                                                                                               *
+*      gcc main.c -o sincro                                                                     *
 * 2. Ejecutar:                                                                                  *
-*                                                                                               *
-* 3. Observar en pantalla como los productores generan lineas y el spooler las imprime.         *
+*      ./sincro                                                                                 *
 *************************************************************************************************/
 
 /***************************************** Headers **********************************************/
@@ -23,6 +22,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
+#include <pthread.h>
 
 /******************************************* Constantes ****************************************/
 
