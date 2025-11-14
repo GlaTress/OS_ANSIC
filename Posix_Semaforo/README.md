@@ -19,5 +19,5 @@ Se realizan dos pruebas: (A) el productor produce **solo 5 elementos** iniciales
 
 ## Compilación y ejecución
 # Compilar
-gcc producer.c -o producer
-gcc consumer.c -o consumer
+gcc producer.c -o producer .
+gcc consumer.c -o consumer .
