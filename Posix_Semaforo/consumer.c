@@ -27,7 +27,6 @@
 *  Funcion:      int main()                                                                         *
 *  Proposito:    Abrir los semaforos y el segmento de memoria compartida creados por el productor,  *
 *                y consumir 10 elementos del bufer circular respetando la sincronizacion.           *
-*  Retorno:       0 si no hay errores; EXIT_FAILURE en caso de fallo.                               *
 *                                                                                                   *
 *****************************************************************************************************/
 int main() {
@@ -59,7 +58,7 @@ int main() {
 
     /* ---- Consumir 10 elementos, respetando la disponibilidad de datos ---- */
     for (int i = 1; i <= 10; i++) {
-        /* ---- Esperar a que haya al menos un elemento disponible (P en lleno) ---- */
+        /* ---- Esperar a que haya al menos un elemento disponible ---- */
         sem_wait(lleno);
 
         /* ---- Leer elemento y avanzar indice circular ---- */
@@ -67,7 +66,7 @@ int main() {
         printf("Consumidor: Consume %d\n", item);
         compartir->salida = (compartir->salida + 1) % BUFFER;
 
-        /* ---- Sennalar que quedo un espacio libre (V en vacio) ---- */
+        /* ---- Sennalar que quedo un espacio libre ---- */
         sem_post(vacio);
 
         /* ---- Ritmo de consumo (simulacion) ---- */
