@@ -1,12 +1,10 @@
 /****************************************************************************************************
-*                                  PONTIFICIA UNIVERSIDAD JAVERIANA                                 *
-*                                       Departamento de Sistemas                                    *
-*                                       SISTEMAS OPERATIVOS                                         *
+*                               Pontificia Universidad Javeriana                                    *
 *                                                                                                   *
-*  Autor:        Gepete Sistemas                                                                    *
-*  Fecha:        2025-11-09                                                                         *
-*  Materia:      Sistemas Operativos                                                                *
-*  Profesor:     Dr. John Jairo Corredor                                                            *
+* Autor:     Thomas Leal PUerta, Carolina Ujueta Ricardo                                            *
+* Fecha:     13/11/2025                                                                             *
+* Materia:   Sistemas Operativos                                                                    *
+* Profesor:  John Jairo Corredor Franco                                                             *
 *  Objetivo:     Implementar el proceso CONSUMIDOR del problema Productor–Consumidor, utilizando    *
 *                semaforos POSIX con nombre para sincronizar y memoria compartida para intercambiar *
 *                datos con el productor.                                                            *
@@ -26,13 +24,13 @@
 
 /****************************************************************************************************
 *                                                                                                   *
-*  Funcion:      int main(void)                                                                     *
+*  Funcion:      int main()                                                                         *
 *  Proposito:    Abrir los semaforos y el segmento de memoria compartida creados por el productor,  *
 *                y consumir 10 elementos del bufer circular respetando la sincronizacion.           *
 *  Retorno:       0 si no hay errores; EXIT_FAILURE en caso de fallo.                               *
 *                                                                                                   *
 *****************************************************************************************************/
-int main(void) {
+int main() {
     /* ---- Abrir semaforos con nombre (deben existir) ---- */
     sem_t *vacio = sem_open("/vacio", 0);
     sem_t *lleno = sem_open("/lleno", 0);
