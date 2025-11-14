@@ -18,7 +18,6 @@ Se realizan dos pruebas: (A) el productor produce **solo 5 elementos** iniciales
 - `consumer`: abre los objetos creados por el productor; extrae elementos del búfer circular.
 
 ## Compilación y ejecución
-```bash
 # Compilar
 gcc producer.c -o producer -lrt -lpthread
 gcc consumer.c -o consumer -lrt -lpthread
