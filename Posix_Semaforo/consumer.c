@@ -12,7 +12,7 @@
 *****************************************************************************************************
 *                                                                                                   *
 *                                   HOW TO USE / COMPILE / RUN                                      *
-*  COMPILAR:   gcc -o consumer consumer.c -lrt -pthread                                             *
+*  COMPILAR:   gcc consumer.c -o consumer                                                           *
 *  EJECUTAR:   ./consumer                                                                           *
 *  NOTAS:      - Espera a que el productor cree los semaforos y la memoria compartida.              *
 *              - Consume 10 elementos del bufer circular compartido.                                *
