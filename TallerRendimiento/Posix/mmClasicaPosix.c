@@ -5,7 +5,6 @@
  * Fecha:     14 de Noviembre de 2025                                                                       *
  * Materia:   Sistemas Operativos                                                                           *
  * Profesor:  John Jairo Corredor, PhD                                                                      *
- * Fichero:   multiMatrix_pthread.c                                                                         *
  *                                                                                                          *
  * Objetivo:                                                                                                *
  *   Implementar la multiplicación de dos matrices cuadradas de tamaño N x N utilizando hilos POSIX         *
@@ -266,6 +265,7 @@ void *multiMatrix(void *variables) {
     pthread_mutex_unlock(&MM_mutex);
     pthread_exit(NULL);
 }
+
 
 
 
