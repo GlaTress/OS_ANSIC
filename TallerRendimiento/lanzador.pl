@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #**************************************************************
 #         		Pontificia Universidad Javeriana
-#     Autor: Carolina Ujueta Ricardo
+#     Autor: Thomas Leal Puerta
 #     Fecha: 13 de noviembre, 2025
 #     Materia: Sistemas Operativos
 #     Tema: Taller de Evaluación de Rendimiento
