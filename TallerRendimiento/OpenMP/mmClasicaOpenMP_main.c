@@ -1,21 +1,24 @@
-/************************************************************************************************************/
-/*  PROGRAMA: Multiplicación de Matrices con Paralelismo mediante OpenMP                                    */
-/*  AUTOR:  J. Corredor, PhD (documentado por Carolina Ujueta Ricardo estudiante de Ingeniería de Sistemas) */
-/*  FECHA:  13 Noviembre 2025                                                                               */
-/*                                                                                                          */
-/*  DESCRIPCIÓN:                                                                                            */
-/*  Este programa realiza la multiplicación de dos matrices cuadradas de tamaño N utilizando                */
-/*  paralelismo basado en OpenMP. Cada hilo se encarga de calcular un subconjunto de las                    */
-/*  operaciones necesarias, lo cual reduce el tiempo de ejecución en comparación con la versión             */
-/*  secuencial.                                                                                             */
-/*                                                                                                          */
-/*  CARACTERÍSTICAS PRINCIPALES:                                                                            */
-/*  - Genera matrices con valores aleatorios.                                                               */
-/*  - Paraleliza los bucles de multiplicación usando directivas OpenMP.                                     */
-/*  - Permite definir el tamaño de las matrices y el número de hilos desde la línea de comandos.            */
-/*  - Incluye funciones para medir el tiempo de ejecución total.                                            */
-/*  - Imprime las matrices en pantalla si su tamaño es menor a 9x9.                                         */
-/*                                                                                                          */
+/************************************************************************************************************
+ *                                   Pontificia Universidad Javeriana                                       *
+ *                                                                                                          *
+ * Autor:     Thomas Leal Puerta                                                                            *
+ * Fecha:     14 de Noviembre de 2025                                                                       *
+ * Materia:   Sistemas Operativos                                                                           *
+ * Profesor:  John Jairo Corredor, PhD                                                                      *
+ *                                                                                                          *
+ *  DESCRIPCIÓN:                                                                                            *
+ *  Este programa realiza la multiplicación de dos matrices cuadradas de tamaño N utilizando                *
+ *  paralelismo basado en OpenMP. Cada hilo se encarga de calcular un subconjunto de las                    *
+ *  operaciones necesarias, lo cual reduce el tiempo de ejecución en comparación con la versión             *
+ *  secuencial.                                                                                             *
+ *                                                                                                          *
+ *  CARACTERÍSTICAS PRINCIPALES:                                                                            *
+ *  - Genera matrices con valores aleatorios.                                                               *
+ *  - Paraleliza los bucles de multiplicación usando directivas OpenMP.                                     *
+ *  - Permite definir el tamaño de las matrices y el número de hilos desde la línea de comandos.            *
+ *  - Incluye funciones para medir el tiempo de ejecución total.                                            *
+ *  - Imprime las matrices en pantalla si su tamaño es menor a 9x9.                                         *
+ *                                                                                                          *
 /************************************************************************************************************/
 
 #include "mmClasicaOpenMP.h"
@@ -75,3 +78,4 @@ int main(int argc, char *argv[]){
 /*      - Tiempo total de ejecución en microsegundos.                                                       */
 /*                                                                                                          */
 /************************************************************************************************************/
+
