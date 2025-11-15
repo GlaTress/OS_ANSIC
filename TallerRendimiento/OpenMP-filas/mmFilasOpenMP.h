@@ -1,11 +1,14 @@
-/************************************************************************************************************/
-/*  ARCHIVO: mmFilasOpenMP.h                                                                                */
-/*  AUTOR:  J. Corredor, PhD (documentado por Carolina Ujueta Ricardo, estudiante de Ingeniería de Sistemas)*/
-/*  FECHA:  13 Noviembre 2025                                                                               */
-/*                                                                                                          */
-/*  DESCRIPCIÓN:                                                                                            */
-/*  Declaraciones, estructuras y prototipos utilizados en la implementación del algoritmo                   */
-/*  de multiplicación de matrices transpuestas con paralelismo OpenMP.                                      */
+/************************************************************************************************************
+ *                                   Pontificia Universidad Javeriana                                       *
+ *                                                                                                          *
+ * Autor:     Thomas Leal Puerta                                                                            *
+ * Fecha:     14 de Noviembre de 2025                                                                       *
+ * Materia:   Sistemas Operativos                                                                           *
+ * Profesor:  John Jairo Corredor, PhD                                                                      *
+ *                                                                                                          *
+ *  DESCRIPCIÓN:                                                                                            *
+ *  Declaraciones, estructuras y prototipos utilizados en la implementación del algoritmo                   *
+ *  de multiplicación de matrices transpuestas con paralelismo OpenMP.                                      *
 /************************************************************************************************************/
 
 #ifndef MM_FILAS_OPENMP_H
@@ -26,3 +29,4 @@ void impMatrix(double *matrix, int D, int t);
 void multiMatrixTrans(double *mA, double *mB, double *mC, int D);
 
 #endif
+
