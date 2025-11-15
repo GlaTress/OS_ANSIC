@@ -1,10 +1,12 @@
-/************************************************************************************************************/
-/*  PROGRAMA: Multiplicación de Matrices con Paralelismo mediante Procesos Fork                             */
-/*  AUTOR:    J. Corredor, PhD (documentado por estudiante de Ingeniería de Sistemas – PUJ)                 */
-/*  FECHA:    Noviembre 2025                                                                                */
-/*                                                                                                          */  
-/*  IMPLEMENTACIÓN: funciones.c                                                                             */
-/*  Contiene la implementación de las funciones utilizadas en el programa principal.                        */
+/************************************************************************************************************
+ *                                   Pontificia Universidad Javeriana                                       *
+ *                                                                                                          *
+ * Autor:     Thomas Leal Puerta                                                                            *
+ * Fecha:     14 de Noviembre de 2025                                                                       *
+ * Materia:   Sistemas Operativos                                                                           *
+ * Profesor:  John Jairo Corredor, PhD                                                                      *
+ *  IMPLEMENTACIÓN: funciones.c                                                                             *
+ *  Contiene la implementación de las funciones utilizadas en el programa principal.                        *
 /************************************************************************************************************/
 
 #include "mmClasicaFork.h"
@@ -85,3 +87,4 @@ void iniMatrix(double *mA, double *mB, int D){
         *mB = (double)rand() / RAND_MAX * (9.0 - 5.0);
     }
 }
+
