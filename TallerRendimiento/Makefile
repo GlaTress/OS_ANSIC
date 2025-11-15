@@ -1,6 +1,6 @@
 ##############################################################################################################
 #            Pontificia Universidad Javeriana                                                                #
-# Autor:     <Tu Nombre>                                                                                     #
+# Autor:     Thomas Leal Puerta                                                                              #
 # Fecha:     14 de Noviembre de 2025                                                                         #
 # Materia:   Sistemas Operativos                                                                             #
 # Objetivo:  Compilar las variantes de Multiplicación de Matrices (Fork, OpenMP, POSIX, OpenMP-filas)        #
