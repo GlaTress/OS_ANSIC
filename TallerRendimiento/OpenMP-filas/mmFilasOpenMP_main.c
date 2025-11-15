@@ -1,19 +1,22 @@
-/************************************************************************************************************/
-/*  PROGRAMA: Multiplicación de Matrices con Transposición (Filas x Filas)                                  */
-/*  AUTOR:  J. Corredor, PhD (documentado por Carolina Ujueta Ricardo, estudiante de Ingeniería de Sistemas)*/
-/*  FECHA:  13 Noviembre 2025                                                                               */
-/*                                                                                                          */
-/*  DESCRIPCIÓN:                                                                                            */
-/*  Este programa realiza la multiplicación de dos matrices cuadradas utilizando el método de               */
-/*  transposición para optimizar la localidad espacial en memoria.                                          */
-/*  Se implementa paralelismo con OpenMP para mejorar el rendimiento mediante múltiples hilos.              */
-/*                                                                                                          */
-/*  CARACTERÍSTICAS PRINCIPALES:                                                                            */
-/*  - Inicializa matrices A y B con valores aleatorios.                                                     */
-/*  - Transpone la segunda matriz para mejorar la eficiencia de cache.                                      */
-/*  - Ejecuta la multiplicación usando OpenMP con hilos configurables.                                      */
-/*  - Mide el tiempo total de ejecución en microsegundos.                                                   */
-/*  - Imprime matrices pequeñas para verificación visual.                                                   */
+/************************************************************************************************************
+ *                                   Pontificia Universidad Javeriana                                       *
+ *                                                                                                          *
+ * Autor:     Thomas Leal Puerta                                                                            *
+ * Fecha:     14 de Noviembre de 2025                                                                       *
+ * Materia:   Sistemas Operativos                                                                           *
+ * Profesor:  John Jairo Corredor, PhD                                                                      *
+ *                                                                                                          *
+ *  DESCRIPCIÓN:                                                                                            *
+ *  Este programa realiza la multiplicación de dos matrices cuadradas utilizando el método de               *
+ *  transposición para optimizar la localidad espacial en memoria.                                          *
+ *  Se implementa paralelismo con OpenMP para mejorar el rendimiento mediante múltiples hilos.              *
+ *                                                                                                          *
+ *  CARACTERÍSTICAS PRINCIPALES:                                                                            *
+ *  - Inicializa matrices A y B con valores aleatorios.                                                     *
+ *  - Transpone la segunda matriz para mejorar la eficiencia de cache.                                      *
+ *  - Ejecuta la multiplicación usando OpenMP con hilos configurables.                                      *
+ *  - Mide el tiempo total de ejecución en microsegundos.                                                   *
+ *  - Imprime matrices pequeñas para verificación visual.                                                   *
 /************************************************************************************************************/
 
 #include "mmFilasOpenMP.h"
@@ -66,3 +69,4 @@ int main(int argc, char *argv[]) {
 /*  SALIDA (para matrices pequeñas):                                                                        */
 /*      Muestra matrices A, B (transpuesta) y C, además del tiempo total de ejecución.                      */
 /************************************************************************************************************/
+
