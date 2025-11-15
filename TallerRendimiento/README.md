@@ -111,7 +111,7 @@ Por cada coincidencia escribe una fila en el CSV.
 
 Cómo compilar:
 ```
-gcc -Wall -Wextra -std=c11 parseResultados.c -o parseResultados
+gcc  parseResultados.c -o parseResultados
 ```
 
 Cómo usar:
