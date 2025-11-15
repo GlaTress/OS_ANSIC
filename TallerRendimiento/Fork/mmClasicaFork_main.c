@@ -1,20 +1,22 @@
-/************************************************************************************************************/
-/*  PROGRAMA: Multiplicación de Matrices con Paralelismo mediante Procesos Fork                             */
-/*  AUTOR:  J. Corredor, PhD (documentado por Carolina Ujueta Ricardo estudiante de Ingeniería de Sistemas) */
-/*  FECHA:  13 Noviembre 2025                                                                               */
-/*                                                                                                          */
-/*  DESCRIPCIÓN:                                                                                            */
-/*  Este programa implementa la multiplicación de dos matrices cuadradas de tamaño N utilizando             */
-/*  paralelismo basado en procesos Fork. Cada proceso hijo calcula un subconjunto de filas de la            */
-/*  matriz resultado, mejorando la eficiencia computacional en sistemas multiprocesador.                    */
-/*                                                                                                          */
-/*  CARACTERÍSTICAS PRINCIPALES:                                                                            */
-/*  - Inicializa matrices con valores aleatorios.                                                           */
-/*  - Divide las filas entre múltiples procesos hijos.                                                      */
-/*  - Cada proceso calcula su bloque de la matriz resultado.                                                */
-/*  - Utiliza temporización para medir el tiempo total de ejecución.                                        */
-/*  - Permite definir el tamaño de la matriz y el número de procesos desde la línea de comandos.            */
-/*                                                                                                          */
+/************************************************************************************************************
+ *                                   Pontificia Universidad Javeriana                                       *
+ *                                                                                                          *
+ * Autor:     Thomas Leal Puerta                                                                            *
+ * Fecha:     14 de Noviembre de 2025                                                                       *
+ * Materia:   Sistemas Operativos                                                                           *
+ * Profesor:  John Jairo Corredor, PhD                                                                      *
+ *  DESCRIPCIÓN:                                                                                            *
+ *  Este programa implementa la multiplicación de dos matrices cuadradas de tamaño N utilizando             *
+ *  paralelismo basado en procesos Fork. Cada proceso hijo calcula un subconjunto de filas de la            *
+ *  matriz resultado, mejorando la eficiencia computacional en sistemas multiprocesador.                    *
+ *                                                                                                          *
+ *  CARACTERÍSTICAS PRINCIPALES:                                                                            *
+ *  - Inicializa matrices con valores aleatorios.                                                           *
+ *  - Divide las filas entre múltiples procesos hijos.                                                      *
+ *  - Cada proceso calcula su bloque de la matriz resultado.                                                *
+ *  - Utiliza temporización para medir el tiempo total de ejecución.                                        *
+ *  - Permite definir el tamaño de la matriz y el número de procesos desde la línea de comandos.            *
+ *                                                                                                          *
 /************************************************************************************************************/
 
 #include "mmClasicaFork.h"
@@ -97,3 +99,4 @@ int main(int argc, char *argv[]) {
 /*      Finalmente, muestra el tiempo total de ejecución en microsegundos.                                  */
 /*                                                                                                          */
 /************************************************************************************************************/
+
