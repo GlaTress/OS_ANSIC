@@ -1,11 +1,14 @@
-/************************************************************************************************************/
-/*  ARCHIVO: funcionesTrans.c                                                                               */
-/*  AUTOR:  J. Corredor, PhD (documentado por Carolina Ujueta Ricardo, estudiante de Ingeniería de Sistemas)*/
-/*  FECHA:  13 Noviembre 2025                                                                               */
-/*                                                                                                          */
-/*  DESCRIPCIÓN:                                                                                            */
-/*  Implementación de funciones auxiliares para la multiplicación de matrices                               */
-/*  mediante transposición (filas x filas) con OpenMP.                                                      */
+/************************************************************************************************************
+ *                                   Pontificia Universidad Javeriana                                       *
+ *                                                                                                          *
+ * Autor:     Thomas Leal Puerta                                                                            *
+ * Fecha:     14 de Noviembre de 2025                                                                       *
+ * Materia:   Sistemas Operativos                                                                           *
+ * Profesor:  John Jairo Corredor, PhD                                                                      *
+ *                                                                                                          *
+ *  DESCRIPCIÓN:                                                                                            *
+ *  Implementación de funciones auxiliares para la multiplicación de matrices                               *
+ *  mediante transposición (filas x filas) con OpenMP.                                                      *
 /************************************************************************************************************/
 
 #include "mmFilasOpenMP.h"
@@ -96,4 +99,5 @@ void multiMatrixTrans(double *mA, double *mB, double *mC, int D) {
 /************************************************************************************************************/
 /*  FIN DEL ARCHIVO: mmFilasOpenMP.c                                                                        */
 /************************************************************************************************************/
+
 
