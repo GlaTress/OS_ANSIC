@@ -31,7 +31,7 @@ mmClasicaOpenMP: OpenMP/mmClasicaOpenMP_main.c OpenMP/mmClasicaOpenMP.c
 	$(GCC) OpenMP/mmClasicaOpenMP_main.c OpenMP/mmClasicaOpenMP.c -o $@ $(FLAGS)
 
 # ---- POSIX ----
-mmClasicaPosix: Posix/mmClasicaPosix_main.c Posix/mmClasicaPosix.c
+mmClasicaPosix: Posix/mmClasicaPosix.c
 	$(GCC) Posix/mmClasicaPosix.c -o $@ $(FLAGS)
 
 # ---- OpenMP por filas ----
