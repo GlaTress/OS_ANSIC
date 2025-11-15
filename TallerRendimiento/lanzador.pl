@@ -22,6 +22,7 @@ foreach $size (@Size_Matriz){
 		for ($i=0; $i<$Repeticiones; $i++) {
 #system("$Path/$Nombre_Ejecutable $size $hilo  >> $file");
 			printf("$Path/$Nombre_Ejecutable $size $hilo \n");
+            system("$Path/$Nombre_Ejecutable $size $hilo >> $file");
 		}
 		close($file);
 	$p=$p+1;
