@@ -59,7 +59,7 @@ void *multiMatrix(void *variables);
 
 
 /****************************************************************************************************
- * Firma:     int main(int argc, char *argv[])                                                       *
+ * Firma:     int main(int argc, char *argv[])                                                      *
  *                                                                                                  *
  * Propósito:                                                                                       *
  *   Inicializar las estructuras necesarias para la multiplicación de matrices usando pthreads,     *
@@ -67,11 +67,11 @@ void *multiMatrix(void *variables);
  *                                                                                                  *
  * Parámetros:                                                                                      *
  *   - argc : número de argumentos de línea de comandos.                                            *
- *   - argv : arreglo de cadenas:                                                                  *
+ *   - argv : arreglo de cadenas:                                                                   *
  *            argv[1] -> tamaño de la matriz (N).                                                   *
  *            argv[2] -> número de hilos (n_threads).                                               *
  *                                                                                                  *
- * Retorno:                                                                                        *
+ * Retorno:                                                                                         *
  *   - 0 cuando el programa finaliza correctamente.                                                 *
  ****************************************************************************************************/
 int main(int argc, char *argv[]) {
@@ -140,13 +140,13 @@ int main(int argc, char *argv[]) {
  * Firma:     void InicioMuestra()                                                                  *
  *                                                                                                  *
  * Propósito:                                                                                       *
- *   Tomar una marca de tiempo inicial usando gettimeofday para medir el tiempo de ejecución         *
+ *   Tomar una marca de tiempo inicial usando gettimeofday para medir el tiempo de ejecución        *
  *   de la sección crítica del programa (multiplicación de matrices).                               *
  *                                                                                                  *
  * Parámetros:                                                                                      *
  *   - Ninguno.                                                                                     *
  *                                                                                                  *
- * Retorno:                                                                                        *
+ * Retorno:                                                                                         *
  *   - Ninguno.                                                                                     *
  ****************************************************************************************************/
 void InicioMuestra() {
@@ -158,13 +158,13 @@ void InicioMuestra() {
  * Firma:     void FinMuestra()                                                                     *
  *                                                                                                  *
  * Propósito:                                                                                       *
- *   Tomar la marca de tiempo final, calcular la diferencia con respecto al inicio y mostrar el      *
+ *   Tomar la marca de tiempo final, calcular la diferencia con respecto al inicio y mostrar el     *
  *   tiempo total de ejecución en segundos (a partir de microsegundos).                             *
  *                                                                                                  *
  * Parámetros:                                                                                      *
  *   - Ninguno.                                                                                     *
  *                                                                                                  *
- * Retorno:                                                                                        *
+ * Retorno:                                                                                         *
  *   - Ninguno.                                                                                     *
  ****************************************************************************************************/
 void FinMuestra() {
@@ -180,15 +180,15 @@ void FinMuestra() {
  * Firma:     void iniMatrix(double *m1, double *m2, int D)                                         *
  *                                                                                                  *
  * Propósito:                                                                                       *
- *   Inicializar las matrices A y B con valores aleatorios en rangos definidos para realizar         *
- *   posteriormente la multiplicación matricial.                                                     *
+ *   Inicializar las matrices A y B con valores aleatorios en rangos definidos para realizar        *
+ *   posteriormente la multiplicación matricial.                                                    *
  *                                                                                                  *
  * Parámetros:                                                                                      *
  *   - m1 : puntero a la primera matriz (A), de tamaño D x D.                                       *
  *   - m2 : puntero a la segunda matriz (B), de tamaño D x D.                                       *
  *   - D  : dimensión de las matrices (número de filas y columnas).                                 *
  *                                                                                                  *
- * Retorno:                                                                                        *
+ * Retorno:                                                                                         *
  *   - Ninguno.                                                                                     *
  ****************************************************************************************************/
 void iniMatrix(double *m1, double *m2, int D) {
@@ -210,7 +210,7 @@ void iniMatrix(double *m1, double *m2, int D) {
  *   - matriz : puntero a la matriz a imprimir.                                                     *
  *   - D      : dimensión de la matriz (número de filas y columnas).                                *
  *                                                                                                  *
- * Retorno:                                                                                        *
+ * Retorno:                                                                                         *
  *   - Ninguno.                                                                                     *
  ****************************************************************************************************/
 void impMatrix(double *matriz, int D) {
@@ -229,14 +229,14 @@ void impMatrix(double *matriz, int D) {
  * Firma:     void *multiMatrix(void *variables)                                                    *
  *                                                                                                  *
  * Propósito:                                                                                       *
- *   Ejecutar el cálculo de un subconjunto de filas de la matriz resultado C = A x B. Cada hilo      *
- *   recibe un bloque de filas (según su id) y realiza el producto fila–columna correspondiente.     *
+ *   Ejecutar el cálculo de un subconjunto de filas de la matriz resultado C = A x B. Cada hilo     *
+ *   recibe un bloque de filas (según su id) y realiza el producto fila–columna correspondiente.    *
  *                                                                                                  *
  * Parámetros:                                                                                      *
  *   - variables : puntero genérico (void *) que se castea a struct parametros*, el cual contiene   *
  *                 el id del hilo, el número total de hilos y la dimensión de las matrices.         *
  *                                                                                                  *
- * Retorno:                                                                                        *
+ * Retorno:                                                                                         *
  *   - void* : valor genérico requerido por la interfaz de pthreads (no se usa).                    *
  ****************************************************************************************************/
 void *multiMatrix(void *variables) {
@@ -266,5 +266,6 @@ void *multiMatrix(void *variables) {
     pthread_mutex_unlock(&MM_mutex);
     pthread_exit(NULL);
 }
+
 
 
