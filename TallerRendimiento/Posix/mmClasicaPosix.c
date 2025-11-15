@@ -171,7 +171,7 @@ void FinMuestra() {
     fin.tv_usec -= inicio.tv_usec;
     fin.tv_sec  -= inicio.tv_sec;
     double tiempo = (double)(fin.tv_sec * 1000000 + fin.tv_usec);
-    printf("\nTiempo total de ejecución: %.6f segundos\n", tiempo / 1e6);
+    printf("Tiempo total de ejecución: %.0f microsegundos\n", tiempo);
 }
 
 
@@ -265,6 +265,7 @@ void *multiMatrix(void *variables) {
     pthread_mutex_unlock(&MM_mutex);
     pthread_exit(NULL);
 }
+
 
 
 
