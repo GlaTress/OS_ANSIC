@@ -27,10 +27,10 @@ Se escogieron las dimensiones **2, 3 y 5** porque:
 
 Se utilizaron **1, 2, 4 y 8 hilos**, escogidos porque:
 
-* **1 hilo** → línea base (ejecución secuencial).
-* **2 hilos** → primera división del trabajo.
-* **4 hilos** → coincide con el número de cores físicos de la CPU.
-* **8 hilos** → permite observar **sobresaturación**, ya que excede la capacidad del hardware.
+* **1 hilo** : línea base (ejecución secuencial).
+* **2 hilos** : primera división del trabajo.
+* **4 hilos** : coincide con el número de cores físicos de la CPU.
+* **8 hilos** : permite observar **sobresaturación**, ya que excede la capacidad del hardware.
 
 ### **Automatización de las Pruebas**
 
