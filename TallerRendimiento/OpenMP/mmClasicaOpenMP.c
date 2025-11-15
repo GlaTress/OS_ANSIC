@@ -1,17 +1,19 @@
-/************************************************************************************************************/
-/*  ARCHIVO: mmClasicaOpenMP.c                                                                              */
-/*  AUTOR:  J. Corredor, PhD (documentado por Carolina Ujueta Ricardo estudiante de Ingeniería de Sistemas) */
-/*  FECHA:  13 Noviembre 2025                                                                               */
-/*                                                                                                          */
-/*  DESCRIPCIÓN:                                                                                            */
-/*  Este archivo contiene las declaraciones e implementaciones de las funciones utilizadas en el            */
-/*  programa de multiplicación de matrices con OpenMP.                                                      */
-/*                                                                                                          */
-/*  Incluye:                                                                                                */
-/*  - Inicialización y visualización de matrices.                                                           */
-/*  - Multiplicación de matrices usando directivas de paralelismo OpenMP.                                   */
-/*  - Medición del tiempo de ejecución mediante gettimeofday().                                             */
-/*                                                                                                          */
+/************************************************************************************************************
+ *                                   Pontificia Universidad Javeriana                                       *
+ *                                                                                                          *
+ * Autor:     Thomas Leal Puerta                                                                            *
+ * Fecha:     14 de Noviembre de 2025                                                                       *
+ * Materia:   Sistemas Operativos                                                                           *
+ * Profesor:  John Jairo Corredor, PhD                                                                      *
+ *  DESCRIPCIÓN:                                                                                            *
+ *  Este archivo contiene las declaraciones e implementaciones de las funciones utilizadas en el            *
+ *  programa de multiplicación de matrices con OpenMP.                                                      *
+ *                                                                                                          *
+ *  Incluye:                                                                                                *
+ *  - Inicialización y visualización de matrices.                                                           *
+ *  - Multiplicación de matrices usando directivas de paralelismo OpenMP.                                   *
+ *  - Medición del tiempo de ejecución mediante gettimeofday().                                             *
+ *                                                                                                          *
 /************************************************************************************************************/
 
 #include "mmClasicaOpenMP.h"
@@ -107,3 +109,4 @@ void multiMatrix(double *mA, double *mB, double *mC, int D) {
 /************************************************************************************************************/
 /*  FIN DEL ARCHIVO: mmClasicaOpenMP.h                                                                      */
 /************************************************************************************************************/
+
